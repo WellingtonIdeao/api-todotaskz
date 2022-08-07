@@ -39,7 +39,7 @@ class Task(models.Model):
         choices=PriorityChoices.choices,
         default=PriorityChoices.FOUR
     )
-
+    # if parent is !null task is sub-task.
     parent = models.ForeignKey(
         'self',
         on_delete=models.CASCADE,
